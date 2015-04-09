@@ -5,7 +5,7 @@ Auto is a collection of scripts to automate as much as possible tasks
 by designing conventions and workflows for a better administrator,
 developer and user experience.
 
-    Usage: auto <command> [<options>]
+    Usage: auto <command> [<context> [<target>]]
 
 At the moment you should not use these scripts if you have not been
 told to do so. They are in an early stage of development.
@@ -14,53 +14,78 @@ http://proojekte.github.io/auto/
 
 <?php
 
-$help = ob_get_contents(); ob_end_clean();
+// If nothing meaningful happens
+// $output will be the text on top of this file,
+// return code will indicate an error
+// and no automation script will be run.
+$output = ob_get_contents(); ob_end_clean();
+$return = 1;
+$script = '';
 
-$output = '';
-$return = 0;
+// Get $command, $context and $target.
+$command = (isset($argv[1]) ? $argv[1] : '');
+$context = (isset($argv[2]) ? $argv[2] : '');
+$target = (isset($argv[3]) ? $argv[3] : '');
 
-$command = (isset($argv[1]) ? $argv[1] : false);
-
+// If help is wanted
+// no automation script will be run
+// and return code will indicate no errors.
 switch ($command)
 {
+    case 'help':
     case '--help':
     case '-help':
     case '-h':
     case '-?':
-        $output = $help;
-        break;
-
-    case 'config':
-    case 'install':
-    case 'update':
-    case 'remove':
-    case 'mount':
-    case 'snapshot':
-    case 'sync':
-    case 'cron':
-        include '/usr/local/share/auto/commands/' . $command . '.php';
-        break;
-
-    default:
-    	$output = $help;
-        $return = 1;
-        break;
+        $command = '';
+        $return = 0;
 }
 
-if (substr($output, -1) == "\n")
+// Check which automation script is asked to be run.
+if ($command <> '' AND $context <> '' AND $target <> '')
 {
-    echo $output;
+    $script = $command . '/' . $context . '/' . $target;
 }
-else
+elseif ($command <> '' AND $context <> '')
+{
+    $script = $command . '/' . $context;
+}
+elseif ($command <> '')
+{
+    $script = $command;
+}
+
+// Run the automation script if readable.
+// Otherwise return an error.
+if ($script <> '') {
+    $script = '/usr/local/share/auto/' . $script . '.php';
+
+    if (is_readable($script))
+    {
+        include $script;
+    }
+    else
+    {
+        $output = "\n" . 'Error: Script "' . $script . '" is not readable.' . "\n" . $output;
+    }
+}
+
+// Convert $output to a string if it is an array.
+if (is_array($output)) {
+    $output = implode("\n", $output);
+}
+
+// Check if $output does end with a new line character.
+// Then return $output plus a new line character.
+// Otherwise return $output as it is.
+if (substr($output, -1) != "\n")
 {
     echo $output . "\n";
 }
-
-if ($return <> 0)
-{
-    exit($return);
-}
 else
 {
-    exit;
+    echo $output;
 }
+
+// Exit this script.
+exit($return);
