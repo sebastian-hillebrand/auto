@@ -1,14 +1,22 @@
-# Automation scripts for Ubuntu
+# Introduction
 
-We have designed some conventions that allow us to automate many tasks for administrators, developers and users. This collection of scripts is part of an concept for a better administrator, developer and user experience.
+## What?
+
+Auto is a collection of scripts to automate as much as possible tasks by designing conventions and workflows for a better administrator, developer and user experience.
+
+## Who and why?
+
+[We](http://proojekte.de/) do not like needless manual work.
+
+## How?
 
     Usage: auto <command> [<options>]
 
-At the moment you should not use these scripts if you have not been told to do so. They are in an early stage of development.
-
 # Installation
 
-There will be an ppa on Launchpad (https://launchpad.net/~proojekte/+archive/ubuntu/auto) if development has reached a point where this scripts are usable by administrators.
+There will be an PPA on Launchpad (https://launchpad.net/~proojekte/+archive/ubuntu/auto) if development has reached a point where our scripts are usable by common administrators.
+
+At the moment you should not use these scripts if you have not been told to do so. They are in an very early stage of development.
 
 # Commands
 
@@ -63,5 +71,9 @@ Automatically run regular and manual spooled cron jobs.
     Usage: auto cron [<user>] [<options>]
 
 # Apps
+
+2do
+
+## ufw
 
 2do
