@@ -5,7 +5,7 @@ Auto is a collection of scripts to automate as much as possible tasks
 by designing conventions and workflows for a better administrator,
 developer and user experience.
 
-    Usage: auto <command> [<context> [<target>]]
+    Usage: auto <command> <context> [<target> [<event>]]
 
 At the moment you should not use these scripts if you have not been
 told to do so. They are in an early stage of development.
@@ -16,16 +16,32 @@ http://proojekte.github.io/auto/
 
 // If nothing meaningful happens
 // $output will be the text on top of this file,
-// return code will indicate an error
+// $return will indicate an error
 // and no automation script will be run.
 $output = ob_get_contents(); ob_end_clean();
 $return = 1;
-$script = '';
+$path = '';
 
-// Get $command, $context and $target.
+// Load functions
+require('/usr/share/auto/functions.php');
+
+// Get $command
 $command = (isset($argv[1]) ? $argv[1] : '');
+
+// Get $context
 $context = (isset($argv[2]) ? $argv[2] : '');
+$context_type = get_type($context);
+$context   = delete_type($context);
+
+// Get $target
 $target = (isset($argv[3]) ? $argv[3] : '');
+$target_type = get_type($target);
+$target   = delete_type($target);
+
+// Get $event
+$event = (isset($argv[4]) ? $argv[4] : '');
+$event_type = get_type($event);
+$event   = delete_type($event);
 
 // If help is wanted
 // no automation script will be run
@@ -42,23 +58,19 @@ switch ($command)
 }
 
 // Check which automation script is asked to be run.
-if ($command <> '' AND $context <> '' AND $target <> '')
+if ($command <> '' AND $context <> '' AND $context_type <> '')
 {
-    $script = $command . '/' . $context . '/' . $target;
+    $path = $command . '/' . $context . '.' . $context_type;
 }
-elseif ($command <> '' AND $context <> '')
+elseif ($command <> '' AND $context <> '' AND $context_type == '')
 {
-    $script = $command . '/' . $context;
-}
-elseif ($command <> '')
-{
-    $script = $command;
+    $path = $command . '/' . $context;
 }
 
 // Run the automation script if readable.
 // Otherwise return an error.
-if ($script <> '') {
-    $script = '/usr/local/share/auto/' . $script . '.php';
+if ($path <> '') {
+    $script = '/usr/share/auto/' . $path . '.php';
 
     if (is_readable($script))
     {
@@ -73,6 +85,25 @@ if ($script <> '') {
 // Convert $output to a string if it is an array.
 if (is_array($output)) {
     $output = implode("\n", $output);
+}
+
+// Generate $log.
+$log = '/var/log/auto/' . $path;
+
+// Mkdir if $log does not exist.
+if (!file_exists($log))
+{
+    mkdir($log, 0770, true);
+}
+
+// Write logfile if $log is writeable.
+if (is_writeable($log))
+{
+    file_put_contents($log . '/' . date("Y-m-d.H-i-s") . '.log', $output, FILE_APPEND);
+}
+else
+{
+    $output = "\n" . 'Warning: Log "' . $log . '" is not writeable.' . "\n\n" . $output;
 }
 
 // Check if $output does end with a new line character.
