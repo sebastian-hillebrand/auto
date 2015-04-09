@@ -5,12 +5,13 @@
  */
 function get_type($string) {
 
-	$strpos = strpos($string, ':');
 	$return = '';
+
+	$strpos = strpos($string, ':');
 
 	if ($strpos !== false)
 	{
-    	$return = substr($string, 0, strpos($string, ':'));
+    	$return = substr($string, 0, $strpos);
 	}
 
 	return $return;
@@ -22,12 +23,13 @@ function get_type($string) {
  */
 function delete_type($string) {
 
-	$strpos = strpos($string, ':');
 	$return = $string;
+
+	$strpos = strpos($string, ':');
 
 	if ($strpos !== false)
 	{
-    	$return = substr($string, strpos($string, ':') + 1);
+    	$return = substr($string, $strpos + 1);
 	}
 
 	return $return;
