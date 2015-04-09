@@ -1,0 +1,66 @@
+#!/usr/bin/php
+<?php ob_start(); ?>
+
+Auto is a collection of scripts to automate as much as possible tasks
+by designing conventions and workflows for a better administrator,
+developer and user experience.
+
+    Usage: auto <command> [<options>]
+
+At the moment you should not use these scripts if you have not been
+told to do so. They are in an early stage of development.
+
+http://proojekte.github.io/auto/
+
+<?php
+
+$help = ob_get_contents(); ob_end_clean();
+
+$output = '';
+$return = 0;
+
+$command = (isset($argv[1]) ? $argv[1] : false);
+
+switch ($command)
+{
+    case '--help':
+    case '-help':
+    case '-h':
+    case '-?':
+        $output = $help;
+        break;
+
+    case 'config':
+    case 'install':
+    case 'update':
+    case 'remove':
+    case 'mount':
+    case 'snapshot':
+    case 'sync':
+    case 'cron':
+        include '/usr/local/share/auto/commands/' . $command . '.php';
+        break;
+
+    default:
+    	$output = $help;
+        $return = 1;
+        break;
+}
+
+if (substr($output, -1) == "\n")
+{
+    echo $output;
+}
+else
+{
+    echo $output . "\n";
+}
+
+if ($return <> 0)
+{
+    exit($return);
+}
+else
+{
+    exit;
+}
