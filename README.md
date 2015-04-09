@@ -28,13 +28,13 @@ Automatically configure installed apps.
 
 ## install
 
-Automatically installs apps.
+Automatically install apps.
 
     Usage: auto install [<app>] [<options>]
 
 ## update
 
-Automatically updates installed apps and its configs.
+Automatically update installed apps and its configs.
 
     Usage: auto update [<app>] [<options>]
 
@@ -58,7 +58,7 @@ Automatically backup volumes.
 
 ## cron
 
-Automatically run regular and manual spooled tasks.
+Automatically run regular and manual spooled cron jobs.
 
     Usage: auto cron [<user>] [<options>]
 
