@@ -33,16 +33,6 @@ $target       = get_target($argv);
 $event_type   = get_event_type($argv);
 $event        = get_event($argv);
 
-echo $command_type . "\n";
-echo $command . "\n";
-echo $context_type . "\n";
-echo $context . "\n";
-echo $target_type . "\n";
-echo $target . "\n";
-echo $event_type . "\n";
-echo $event . "\n";
-die();
-
 // If help is wanted
 // don't run any automation scripts
 // and return no error code.
