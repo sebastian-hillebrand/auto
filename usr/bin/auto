@@ -14,16 +14,30 @@ http://proojekte.github.io/auto/
 
 <?php
 
-// If nothing meaningful happens
-// $output will be the text on top of this file
-// and $return will indicate an error
+/**
+ * If nothing meaningful happens
+ * $output will be the text on top of this file
+ * and $return will indicate an error
+ */
+
 $output = ob_get_contents(); ob_end_clean();
 $return = 1;
 
-// Load functions
+/**
+ * Load functions 
+ */
+
 require('/usr/share/auto/functions.php');
 
-// Get $params
+if (is_readable('/usr/local/share/auto/functions.php'))
+{
+    require('/usr/local/share/auto/functions.php');
+}
+
+/**
+ * Generate variables
+ */
+
 $command_type = get_command_type($argv);
 $command      = get_command($argv);
 $context_type = get_context_type($argv);
@@ -32,10 +46,15 @@ $target_type  = get_target_type($argv);
 $target       = get_target($argv);
 $event_type   = get_event_type($argv);
 $event        = get_event($argv);
+$path         = get_path($command, $context, $context_type);
+$log          = '/var/log/auto/' . $path;
 
-// If help is wanted
-// don't run any automation scripts
-// and return no error code.
+/**
+ * If help is wanted
+ * don't run any automation scripts
+ * and return no error code.
+ */
+
 switch ($command)
 {
     case 'help':
@@ -43,23 +62,25 @@ switch ($command)
     case '-help':
     case '-h':
     case '-?':
-        $command = '';
+        $path = ''; // prevents execution of automation scripts
         $return = 0;
 }
 
-// Get $path
-$path = get_path($command, $context, $context_type);
+/**
+ * Run an automation script if readable.
+ * Otherwise return an error.
+ */
 
-// Run the automation script if readable.
-// Otherwise return an error.
 if ($path <> '')
 {
+    // Check if local admin has created own automation script
     if (is_readable('/usr/local/share/auto/' . $path . '.php'))
     {
         include '/usr/local/share/auto/' . $path . '.php';
     }
     else
     {
+        // Check if there is an official automation script
         if (is_readable('/usr/share/auto/' . $path . '.php'))
         {
             include '/usr/share/auto/' . $path . '.php';
@@ -71,42 +92,14 @@ if ($path <> '')
     }
 }
 
-// Convert $output to a string if it is an array.
-if (is_array($output))
-{
-    $output = implode("\n", $output);
-}
+/**
+ * Output $output.
+ */
 
-// Generate $log.
-$log = '/var/log/auto/' . $path;
+output($output);
 
-// Mkdir if $log does not exist.
-if (!file_exists($log))
-{
-    mkdir($log, 0770, true);
-}
+/**
+ * Exit with $return.
+ */
 
-// Write $output to logfile if $log is writeable.
-if (is_writeable($log))
-{
-    file_put_contents($log . '/' . date("Y-m-d.H-i-s") . '.log', $output, FILE_APPEND);
-}
-else
-{
-    $output = "\n" . 'Warning: Log "' . $log . '" is not writeable.' . "\n\n" . $output;
-}
-
-// Check if $output does not end with a new line character.
-// Then return $output plus a new line character.
-// Otherwise return $output as it is.
-if (substr($output, -1) != "\n")
-{
-    echo $output . "\n";
-}
-else
-{
-    echo $output;
-}
-
-// Exit this script.
 exit($return);
