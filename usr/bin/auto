@@ -8,7 +8,7 @@ developer and user experience.
     Usage: auto <command> <context> [<target> [<event>]]
 
 At the moment you should not use these scripts if you have not been
-told to do so. They are in an early stage of development.
+told to do so. They are in a very early stage of development.
 
 http://proojekte.github.io/auto/
 
@@ -25,27 +25,19 @@ $path = '';
 // Load functions
 require('/usr/share/auto/functions.php');
 
-// Get $command
-$command = (isset($argv[1]) ? $argv[1] : '');
-
-// Get $context
-$context = (isset($argv[2]) ? $argv[2] : '');
-$context_type = get_type($context);
-$context   = delete_type($context);
-
-// Get $target
-$target = (isset($argv[3]) ? $argv[3] : '');
-$target_type = get_type($target);
-$target   = delete_type($target);
-
-// Get $event
-$event = (isset($argv[4]) ? $argv[4] : '');
-$event_type = get_type($event);
-$event   = delete_type($event);
+// Get $params
+$command      = get_command($argv);
+$command_type = get_command_type($argv);
+$context      = get_context($argv);
+$context_type = get_context_type($argv);
+$target       = get_target($argv);
+$target_type  = get_target_type($argv);
+$event        = get_event($argv);
+$event_type   = get_event_type($argv);
 
 // If help is wanted
-// no automation script will be run
-// and return code will indicate no errors.
+// don't run any automation scripts
+// and return no error code.
 switch ($command)
 {
     case 'help':
@@ -57,19 +49,13 @@ switch ($command)
         $return = 0;
 }
 
-// Check which automation script is asked to be run.
-if ($command <> '' AND $context <> '' AND $context_type <> '')
-{
-    $path = $command . '/' . $context . '.' . $context_type;
-}
-elseif ($command <> '' AND $context <> '' AND $context_type == '')
-{
-    $path = $command . '/' . $context;
-}
+// Get $path
+$path = get_path($command, $context, $context_type);
 
 // Run the automation script if readable.
 // Otherwise return an error.
-if ($path <> '') {
+if ($path <> '')
+{
     $script = '/usr/share/auto/' . $path . '.php';
 
     if (is_readable($script))
@@ -78,12 +64,13 @@ if ($path <> '') {
     }
     else
     {
-        $output = "\n" . 'Error: Script "' . $script . '" is not readable.' . "\n" . $output;
+        $output = 'Error: Script "' . $script . '" is not readable.';
     }
 }
 
 // Convert $output to a string if it is an array.
-if (is_array($output)) {
+if (is_array($output))
+{
     $output = implode("\n", $output);
 }
 
@@ -96,7 +83,7 @@ if (!file_exists($log))
     mkdir($log, 0770, true);
 }
 
-// Write logfile if $log is writeable.
+// Write $output to logfile if $log is writeable.
 if (is_writeable($log))
 {
     file_put_contents($log . '/' . date("Y-m-d.H-i-s") . '.log', $output, FILE_APPEND);
@@ -106,7 +93,7 @@ else
     $output = "\n" . 'Warning: Log "' . $log . '" is not writeable.' . "\n\n" . $output;
 }
 
-// Check if $output does end with a new line character.
+// Check if $output does not end with a new line character.
 // Then return $output plus a new line character.
 // Otherwise return $output as it is.
 if (substr($output, -1) != "\n")
