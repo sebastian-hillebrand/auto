@@ -15,12 +15,10 @@ http://proojekte.github.io/auto/
 <?php
 
 // If nothing meaningful happens
-// $output will be the text on top of this file,
-// $return will indicate an error
-// and no automation script will be run.
+// $output will be the text on top of this file
+// and $return will indicate an error
 $output = ob_get_contents(); ob_end_clean();
 $return = 1;
-$path = '';
 
 // Load functions
 require('/usr/share/auto/functions.php');
@@ -34,6 +32,16 @@ $target_type  = get_target_type($argv);
 $target       = get_target($argv);
 $event_type   = get_event_type($argv);
 $event        = get_event($argv);
+
+echo $command_type . "\n";
+echo $command . "\n";
+echo $context_type . "\n";
+echo $context . "\n";
+echo $target_type . "\n";
+echo $target . "\n";
+echo $event_type . "\n";
+echo $event . "\n";
+die();
 
 // If help is wanted
 // don't run any automation scripts
@@ -56,15 +64,20 @@ $path = get_path($command, $context, $context_type);
 // Otherwise return an error.
 if ($path <> '')
 {
-    $script = '/usr/share/auto/' . $path . '.php';
-
-    if (is_readable($script))
+    if (is_readable('/usr/local/share/auto/' . $path . '.php'))
     {
-        include $script;
+        include '/usr/local/share/auto/' . $path . '.php';
     }
     else
     {
-        $output = 'Error: Script "' . $script . '" is not readable.';
+        if (is_readable('/usr/share/auto/' . $path . '.php'))
+        {
+            include '/usr/share/auto/' . $path . '.php';
+        }
+        else
+        {
+            $output = 'Error: Automation script /usr[/local]/share/auto/' . $path . '.php not found.';
+        }
     }
 }
 
