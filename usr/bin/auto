@@ -5,7 +5,7 @@ Auto is a collection of scripts to automate as much as possible tasks
 by designing conventions and workflows for a better administrator,
 developer and user experience.
 
-    Usage: auto <command> <context> [<target> [<event>]]
+    Usage: auto <command> [<context> [<target> [<event>]]]
 
 At the moment you should not use these scripts if you have not been
 told to do so. They are in a very early stage of development.
@@ -26,14 +26,24 @@ $path = '';
 require('/usr/share/auto/functions.php');
 
 // Get $params
-$command      = get_command($argv);
 $command_type = get_command_type($argv);
-$context      = get_context($argv);
+$command      = get_command($argv);
 $context_type = get_context_type($argv);
-$target       = get_target($argv);
+$context      = get_context($argv);
 $target_type  = get_target_type($argv);
-$event        = get_event($argv);
+$target       = get_target($argv);
 $event_type   = get_event_type($argv);
+$event        = get_event($argv);
+
+echo $command_type . "\n";
+echo $command . "\n";
+echo $context_type . "\n";
+echo $context . "\n";
+echo $target_type . "\n";
+echo $target . "\n";
+echo $event_type . "\n";
+echo $event . "\n";
+die();
 
 // If help is wanted
 // don't run any automation scripts
