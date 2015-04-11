@@ -1,11 +1,13 @@
 # What?
 
-Auto is a collection of scripts to automate as much as possible tasks by designing conventions and workflows for a better administrator, developer and user experience.
+Auto is a well designed scripting system for automation of as much as possible tasks. It simplifies commands and automates workflows.
 
 # Why?
 
-Because [we](http://proojekte.de/) love technology that does everything the right way and helps us doing what we want. And because nobody likes needless manual work. ;-)
+Because a lot of administrators, developers and users want to relax and spend their time in more meaningful things.
 
 # How?
+
+    auto <command> [<source>] <target> [if <event>]
 
 Have a look at the corresponding [wiki](https://github.com/proojekte/auto/wiki).
