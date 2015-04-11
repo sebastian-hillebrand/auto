@@ -1,10 +1,10 @@
 # What?
 
-Auto is a well designed scripting system for automation of as much as possible tasks. It simplifies commands and automates workflows.
+Auto is a well designed automation system. It simplifies commands and then automates workflows with easily understandable scripts.
 
 # Why?
 
-Because a lot of administrators, developers and users want to relax and spend their time in more meaningful things.
+Because a lot of administrators, developers and users need to relax and want to spend their time in more meaningful things than solving the same problems over and over again.
 
 # How?
 
