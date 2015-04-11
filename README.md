@@ -4,7 +4,7 @@ Auto is a collection of scripts to automate as much as possible tasks by designi
 
 # Why?
 
-Because [we](http://proojekte.de/) love technology that does everything the right way and helps us doing what we want. And because we do not like useless manual work. ;-)
+Because [we](http://proojekte.de/) love technology that does everything the right way and helps us doing what we want. And because nobody likes needless manual work. ;-)
 
 # How?
 
