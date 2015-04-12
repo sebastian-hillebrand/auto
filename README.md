@@ -1,5 +1,7 @@
 https://github.com/proojekte/auto/wiki
 
+***
+
 # What?
 
 Auto is an open and well designed automation system.
@@ -34,3 +36,7 @@ Because a lot of administrators, developers and users should spend their time in
     Reg. court:  Amtsgericht Coesfeld
     Reg. number: HRB 13094
     VAT ID:      DE 275 978 266
+
+***
+
+https://github.com/proojekte/auto/wiki
