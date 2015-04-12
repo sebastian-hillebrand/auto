@@ -10,7 +10,7 @@ It simplifies commands and automates workflows using easily understandable scrip
 
 Auto works as you expect it; even under the hood. It does not reinvent the wheel. It just executes commands the way you would do it if you would have enough time to be a pro in every technology Auto covers.
 
-And last but not least. By default Auto tells you in front of every automation what it tries to reach for you, what it needs to do or change, and logs every step and its result in an easily understandable log file. It does it because you should be able to understand how to create or customize automation scripts for your needs.
+And last but not least. By default Auto tells you in front of every automation what it tries to reach for you, what it needs to do or change, and logs every step and its result in an easily understandable log file. Auto is designed this way because you should be able to understand and create or customize automation scripts for your needs.
 
 No secrets. No obstacles. Just the way you want.
 
