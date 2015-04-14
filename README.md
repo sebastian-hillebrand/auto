@@ -6,9 +6,61 @@ https://github.com/proojekte/auto/wiki
 
 Auto is an open and well-designed automation system.
 
-Auto gets his super power from well-designed and proven conventions. It simplifies administration, development and usage of technology through a unified and assistive user interface. Thus Auto helps you staying focused and getting things done; even, if you are not a professional in every technology Auto covers.
+> Auto what?!
 
-Okay. Enough advertising. Auto is such simple that it explains itself.
+If you never thought that doing things with technology should be simpler and less time consuming, Auto will not make you happy.
+
+Also, technology professionals often think:
+
+> If there is a solution for a problem, google knows it.
+
+So. Why are we developing Auto?
+
+Because it is needed, we are good in optimizing workflows and it is fun. :-)
+
+***
+
+> We are technology professionals, but we are also human. We have lifes, wifes and kids. Why should we not have more spare time to play with our kids; or with cool new stuff?
+
+***
+
+Yes. Google can guide us to a lot of really cool solutions out there. But even here the problem starts.
+
+Probably all administrators, developers and users are searching (more or less often) instructions to do something with technology instead of just using it.
+
+Have you ever calculated how often you asked google? How often you failed to rely on "user generated content"? How often you failed because things are to complex?
+
+This all is consuming valuable time. Most time without need.
+
+***
+
+> Did you ever asked yourself if googling is really the one and only solution to get things done with technology?
+
+***
+
+We did. And we were doing it more and more often with each additional or complexity gaining requirement.
+
+Complexity is an obstacle; even if you are a technology professional.
+
+On the first side even almost every tech pro loves open and efficient technologies that just works. But on the other side we also love experimenting with cool new stuff on Windows, Mac OS X, iOS, GNU/Linux and Android (for example).
+
+***
+
+> So why should we all always reinvent the wheel with self made scripts over and over again?
+
+***
+
+What about putting our knowledge and super powers together to create an automation system that helps technology administrators, developers and users getting more spare time to play with their kids; or with cool new stuff?
+
+Here comes Auto to the stage.
+
+## Abstract
+
+Auto is build up on well-designed and proven conventions. It simplifies administration, development and usage of technology through a unified and assistive user interface. Thus Auto helps you staying focused and getting things done; even, if you are not a professional in every technology Auto covers.
+
+Okay. Enough advertising. Let Auto explain itself.
+
+## Interaction example
 
 `user@domain@device:~$` **`auto`**
 
@@ -43,7 +95,7 @@ Okay. Enough advertising. Auto is such simple that it explains itself.
 
 As you can see, using Auto feels natural; like talking with a personal technology assistant.
 
-Let us look further how Auto communicates with you.
+## Further interaction example
 
 `user@domain@device:~$` **`auto backup`**
 
@@ -72,7 +124,9 @@ Let us look further how Auto communicates with you.
 
 Whenever it seams usefull, Auto tells you in front of every automation what it tries to reach for you, which commands it will use and how to start the workflow. This way it is always safe to just guess a command and look if it results in something you want.
 
-Also Auto does not reinvent the wheel. Ultimately it simply executes commands for you; the way you would do it if you would have enough time to be a specialized professional in every technology Auto covers.
+## Auto does what you would do
+
+Auto does not reinvent the wheel. Ultimately it simply executes commands for you; the way you would do it if you would have enough time to be a specialized professional in every technology Auto covers.
 
 `user@domain@device:~$` **`auto sync`**
 
@@ -95,24 +149,26 @@ Also Auto does not reinvent the wheel. Ultimately it simply executes commands fo
 
         auto start
 
-Of course Auto can simply revert your system to any point in time when a backup has been made. But undo can be even more specific.
+## Auto simplifies using cool but complex stuff
 
-`user@domain@device:~$` **`auto undo install thunderbird`**
+Do you know Time Machine from Apple? You can use Auto to revert your data or software to any point in time where a snapshot has been created. Auto makes it usable on all servers and devices; plattform indipendend of course.
 
-    You have installed Mozilla Thunderbird 2 days ago.
+`user@domain@device:~$` **`auto undo upgrade thunderbird`**
 
-    Undoing reverts the following changes the installation caused:
+    You have updated Mozilla Thunderbird two days ago.
 
-    1. X
-    2. Y
-    3. Z
-    4. a
-    5. b
-    6. c
+    Undo reverts the following changes the update caused:
 
-    Also you will get log files of every step and its result.
+    1. a
+    2. b
+    3. c
+    4. X
+    5. Y
+    6. Z
 
-    /var/log/auto/user@domain@device/<date>/<time>/sync.<command>.<result>.log
+    Also you will get log files of every step and its result. Location:
+
+    /chroot/user@domain@device/var/log/auto/<date>/<time>/<command>.<result>.log
 
     Commands, that will be used:
 
@@ -126,13 +182,13 @@ Of course Auto can simply revert your system to any point in time when a backup 
 
         auto start
 
-And last but not least Auto respects vendor and software standards; and of course your server or device configuration. Thus you can start and stop using Auto whenever you want. It is upon you to decide if you automate just one aspect of just one server or device, or if you automate your entire technology work and life with Auto.
+Last but not least Auto respects vendor and software standards; and of course your server or device configuration. Thus you can start and stop using Auto whenever you want. It is upon you to decide if you automate just one aspect of one server or device, or if you automate your entire technology stack with Auto.
 
 # Impress
 
     Proojekte GmbH: Acting with insight and foresight.
     Innovative services from highly motivated professionals.
-    
+
     Phone: +49 2542 889147
     Fax:   +49 2542 889148
     
