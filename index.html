@@ -19,31 +19,141 @@
     </section>
 
     <section class="main-content">
-      <p><a href="https://github.com/proojekte/auto/wiki">https://github.com/proojekte/auto/wiki</a></p>
+      <h1>
+<a id="introduction-to-auto" class="anchor" href="#introduction-to-auto" aria-hidden="true"><span class="octicon octicon-link"></span></a>Introduction to Auto</h1>
 
-<h1>
-<a id="what" class="anchor" href="#what" aria-hidden="true"><span class="octicon octicon-link"></span></a>What?</h1>
+<p>Auto is an open and well-designed automation system.</p>
 
-<p>Auto is an open and well designed automation system.</p>
+<p>Auto gets his super power from well-designed and proven conventions. It simplifies administration, development and usage of technology through a unified and assistive user interface. Thus Auto helps you staying focused and getting things done; even, if you are not a professional in every technology Auto covers.</p>
 
-<p>It simplifies commands and automates workflows using easily understandable scripts.</p>
+<p>Okay. Enough advertising. Auto is such simple that it explains itself.</p>
 
-<pre><code>Usage: auto &lt;command&gt; [&lt;source&gt;] &lt;target&gt; [if &lt;event&gt;]
+<p><code>user@domain@device:~$</code> <strong><code>auto</code></strong></p>
+
+<pre><code>What do you want to automate?
+
+Hint:
+
+    auto help
 </code></pre>
 
-<p>Auto works as you expect it; even under the hood. It does not reinvent the wheel. It just executes commands the way you would do it if you would have enough time to be a pro in every technology Auto covers.</p>
+<p><code>user@domain@device:~$</code> <strong><code>auto help</code></strong></p>
 
-<p>And last but not least. By default Auto tells you in front of every automation what it tries to reach for you, what it needs to do or change, and logs every step and its result in an easily understandable log file. Auto is designed this way because you should be able to understand and create or customize automation scripts for your needs.</p>
+<pre><code>Auto is an open and well-designed automation system.
 
-<p>No secrets. No obstacles. Just the way you want.</p>
+Visit https://github.com/proojekte/auto/wiki to get an overview.
+
+Main usage scheme:
+
+    auto &lt;command&gt; [&lt;target&gt; [if &lt;event&gt;]]
+
+Hint:
+
+    auto list commands
+</code></pre>
+
+<p><code>user@domain@device:~$</code> <strong><code>auto list commands</code></strong></p>
+
+<pre><code>backup, config, copy, delete, diff, hash, help, install, record, show, snapshot,
+start, stop, sync, upgrade, ...
+
+Example:
+
+    auto help
+</code></pre>
+
+<p>As you can see, using Auto feels natural; like talking with a personal technology assistant.</p>
+
+<p>Let us look further how Auto communicates with you.</p>
+
+<p><code>user@domain@device:~$</code> <strong><code>auto backup</code></strong></p>
+
+<pre><code>You will get a snapshot of all your personal data and software. Location:
+
+/backup/user@domain@device/&lt;date&gt;/&lt;time&gt;/
+
+Also you will get log files of every step and its result. Location:
+
+/chroot/user@domain@device/var/log/auto/&lt;date&gt;/&lt;time&gt;/&lt;command&gt;.&lt;result&gt;.log
+
+Commands, that will be used:
+
+    1. auto start    workflow
+    2. auto snapshot user \
+                     backup:&lt;date&gt;/&lt;time&gt;
+    3. auto delete                                      backup:next
+    4. auto move                          backup:latest backup:next
+    5. auto link     backup:&lt;date&gt;/&lt;time&gt; backup:latest
+    6. auto compare                       backup:latest backup:next
+    7. auto stop     workflow
+
+To start this workflow, simply repeat your last command, or type:
+
+    auto start
+</code></pre>
+
+<p>Whenever it seams usefull, Auto tells you in front of every automation what it tries to reach for you, which commands it will use and how to start the workflow. This way it is always safe to just guess a command and look if it results in something you want.</p>
+
+<p>Also Auto does not reinvent the wheel. Ultimately it simply executes commands for you; the way you would do it if you would have enough time to be a specialized professional in every technology Auto covers.</p>
+
+<p><code>user@domain@device:~$</code> <strong><code>auto sync</code></strong></p>
+
+<pre><code>All your personal data and software will be synced bidirectional with
+user@domain@server.
+
+Also you will get log files of every step and its result. Location:
+
+/chroot/user@domain@device/var/log/auto/&lt;date&gt;/&lt;time&gt;/&lt;command&gt;.&lt;result&gt;.log
+
+Commands, that will be used:
+
+    1. auto start   workflow
+    2. auto backup
+    3. auto execute "rsync -a -b -c -X -Y -Z -1 -2 -3 &lt;source&gt; &lt;target&gt;"
+    4. auto backup
+    5. auto stop    workflow
+
+To start this workflow, simply repeat your last command, or type:
+
+    auto start
+</code></pre>
+
+<p>Of course Auto can simply revert your system to any point in time when a backup has been made. But undo can be even more specific.</p>
+
+<p><code>user@domain@device:~$</code> <strong><code>auto undo install thunderbird</code></strong></p>
+
+<pre><code>You have installed Mozilla Thunderbird 2 days ago.
+
+Undoing reverts the following changes the installation caused:
+
+1. X
+2. Y
+3. Z
+4. a
+5. b
+6. c
+
+Also you will get log files of every step and its result.
+
+/var/log/auto/user@domain@device/&lt;date&gt;/&lt;time&gt;/sync.&lt;command&gt;.&lt;result&gt;.log
+
+Commands, that will be used:
+
+    1. auto start  workflow
+    2. auto backup
+    3. auto undo   backup:2015-04-12/10-11-12
+    4. auto backup
+    5. auto stop   workflow
+
+To start this workflow, simply repeat your last command, or type:
+
+    auto start
+</code></pre>
+
+<p>And last but not least Auto respects vendor and software standards; and of course your server or device configuration. Thus you can start and stop using Auto whenever you want. It is upon you to decide if you automate just one aspect of just one server or device, or if you automate your entire technology work and life with Auto.</p>
 
 <h1>
-<a id="why" class="anchor" href="#why" aria-hidden="true"><span class="octicon octicon-link"></span></a>Why?</h1>
-
-<p>Because a lot of administrators, developers and users should spend their time in more meaningful things than solving the same problems over and over again.</p>
-
-<h1>
-<a id="who" class="anchor" href="#who" aria-hidden="true"><span class="octicon octicon-link"></span></a>Who?</h1>
+<a id="impress" class="anchor" href="#impress" aria-hidden="true"><span class="octicon octicon-link"></span></a>Impress</h1>
 
 <pre><code>Proojekte GmbH: Acting with insight and foresight.
 Innovative services from highly motivated professionals.
