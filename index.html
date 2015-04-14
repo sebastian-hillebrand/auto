@@ -24,9 +24,73 @@
 
 <p>Auto is an open and well-designed automation system.</p>
 
-<p>Auto gets his super power from well-designed and proven conventions. It simplifies administration, development and usage of technology through a unified and assistive user interface. Thus Auto helps you staying focused and getting things done; even, if you are not a professional in every technology Auto covers.</p>
+<blockquote>
+<p>Auto what?!</p>
+</blockquote>
 
-<p>Okay. Enough advertising. Auto is such simple that it explains itself.</p>
+<p>If you never thought that doing things with technology should be simpler and less time consuming, Auto will not make you happy.</p>
+
+<p>Also, technology professionals often think:</p>
+
+<blockquote>
+<p>If there is a solution for a problem, google knows it.</p>
+</blockquote>
+
+<p>So. Why are we developing Auto?</p>
+
+<p>Because it is needed, we are good in optimizing workflows and it is fun. :-)</p>
+
+<hr>
+
+<blockquote>
+<p>We are technology professionals, but we are also human. We have lifes, wifes and kids. Why should we not have more spare time to play with our kids; or with cool new stuff?</p>
+</blockquote>
+
+<hr>
+
+<p>Yes. Google can guide us to a lot of really cool solutions out there. But even here the problem starts.</p>
+
+<p>Probably all administrators, developers and users are searching (more or less often) instructions to do something with technology instead of just using it.</p>
+
+<p>Have you ever calculated how often you asked google? How often you failed to rely on "user generated content"? How often you failed because things are to complex?</p>
+
+<p>This all is consuming valuable time. Most time without need.</p>
+
+<hr>
+
+<blockquote>
+<p>Did you ever asked yourself if googling is really the one and only solution to get things done with technology?</p>
+</blockquote>
+
+<hr>
+
+<p>We did. And we were doing it more and more often with each additional or complexity gaining requirement.</p>
+
+<p>Complexity is an obstacle; even if you are a technology professional.</p>
+
+<p>On the first side even almost every tech pro loves open and efficient technologies that just works. But on the other side we also love experimenting with cool new stuff on Windows, Mac OS X, iOS, GNU/Linux and Android (for example).</p>
+
+<hr>
+
+<blockquote>
+<p>So why should we all always reinvent the wheel with self made scripts over and over again?</p>
+</blockquote>
+
+<hr>
+
+<p>What about putting our knowledge and super powers together to create an automation system that helps technology administrators, developers and users getting more spare time to play with their kids; or with cool new stuff?</p>
+
+<p>Here comes Auto to the stage.</p>
+
+<h2>
+<a id="abstract" class="anchor" href="#abstract" aria-hidden="true"><span class="octicon octicon-link"></span></a>Abstract</h2>
+
+<p>Auto is build up on well-designed and proven conventions. It simplifies administration, development and usage of technology through a unified and assistive user interface. Thus Auto helps you staying focused and getting things done; even, if you are not a professional in every technology Auto covers.</p>
+
+<p>Okay. Enough advertising. Let Auto explain itself.</p>
+
+<h2>
+<a id="interaction-example" class="anchor" href="#interaction-example" aria-hidden="true"><span class="octicon octicon-link"></span></a>Interaction example</h2>
 
 <p><code>user@domain@device:~$</code> <strong><code>auto</code></strong></p>
 
@@ -64,7 +128,8 @@ Example:
 
 <p>As you can see, using Auto feels natural; like talking with a personal technology assistant.</p>
 
-<p>Let us look further how Auto communicates with you.</p>
+<h2>
+<a id="further-interaction-example" class="anchor" href="#further-interaction-example" aria-hidden="true"><span class="octicon octicon-link"></span></a>Further interaction example</h2>
 
 <p><code>user@domain@device:~$</code> <strong><code>auto backup</code></strong></p>
 
@@ -94,7 +159,10 @@ To start this workflow, simply repeat your last command, or type:
 
 <p>Whenever it seams usefull, Auto tells you in front of every automation what it tries to reach for you, which commands it will use and how to start the workflow. This way it is always safe to just guess a command and look if it results in something you want.</p>
 
-<p>Also Auto does not reinvent the wheel. Ultimately it simply executes commands for you; the way you would do it if you would have enough time to be a specialized professional in every technology Auto covers.</p>
+<h2>
+<a id="auto-does-what-you-would-do" class="anchor" href="#auto-does-what-you-would-do" aria-hidden="true"><span class="octicon octicon-link"></span></a>Auto does what you would do</h2>
+
+<p>Auto does not reinvent the wheel. Ultimately it simply executes commands for you; the way you would do it if you would have enough time to be a specialized professional in every technology Auto covers.</p>
 
 <p><code>user@domain@device:~$</code> <strong><code>auto sync</code></strong></p>
 
@@ -118,24 +186,27 @@ To start this workflow, simply repeat your last command, or type:
     auto start
 </code></pre>
 
-<p>Of course Auto can simply revert your system to any point in time when a backup has been made. But undo can be even more specific.</p>
+<h2>
+<a id="auto-simplifies-using-cool-but-complex-stuff" class="anchor" href="#auto-simplifies-using-cool-but-complex-stuff" aria-hidden="true"><span class="octicon octicon-link"></span></a>Auto simplifies using cool but complex stuff</h2>
 
-<p><code>user@domain@device:~$</code> <strong><code>auto undo install thunderbird</code></strong></p>
+<p>Do you know Time Machine from Apple? You can use Auto to revert your data or software to any point in time where a snapshot has been created. Auto makes it usable on all servers and devices; plattform indipendend of course.</p>
 
-<pre><code>You have installed Mozilla Thunderbird 2 days ago.
+<p><code>user@domain@device:~$</code> <strong><code>auto undo upgrade thunderbird</code></strong></p>
 
-Undoing reverts the following changes the installation caused:
+<pre><code>You have updated Mozilla Thunderbird two days ago.
 
-1. X
-2. Y
-3. Z
-4. a
-5. b
-6. c
+Undo reverts the following changes the update caused:
 
-Also you will get log files of every step and its result.
+1. a
+2. b
+3. c
+4. X
+5. Y
+6. Z
 
-/var/log/auto/user@domain@device/&lt;date&gt;/&lt;time&gt;/sync.&lt;command&gt;.&lt;result&gt;.log
+Also you will get log files of every step and its result. Location:
+
+/chroot/user@domain@device/var/log/auto/&lt;date&gt;/&lt;time&gt;/&lt;command&gt;.&lt;result&gt;.log
 
 Commands, that will be used:
 
@@ -150,7 +221,7 @@ To start this workflow, simply repeat your last command, or type:
     auto start
 </code></pre>
 
-<p>And last but not least Auto respects vendor and software standards; and of course your server or device configuration. Thus you can start and stop using Auto whenever you want. It is upon you to decide if you automate just one aspect of just one server or device, or if you automate your entire technology work and life with Auto.</p>
+<p>Last but not least Auto respects vendor and software standards; and of course your server or device configuration. Thus you can start and stop using Auto whenever you want. It is upon you to decide if you automate just one aspect of one server or device, or if you automate your entire technology stack with Auto.</p>
 
 <h1>
 <a id="impress" class="anchor" href="#impress" aria-hidden="true"><span class="octicon octicon-link"></span></a>Impress</h1>
@@ -170,6 +241,10 @@ Reg. court:  Amtsgericht Coesfeld
 Reg. number: HRB 13094
 VAT ID:      DE 275 978 266
 </code></pre>
+
+<hr>
+
+<p><a href="https://github.com/proojekte/auto/wiki">https://github.com/proojekte/auto/wiki</a></p>
 
       <footer class="site-footer">
         <span class="site-footer-owner"><a href="https://github.com/proojekte/auto">Auto</a> is maintained by <a href="https://github.com/proojekte">proojekte</a>.</span>
