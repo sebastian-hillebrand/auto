@@ -27,7 +27,7 @@ Because we need and want something, that simplifies administrating, developing a
 
 > Complexity is an obstacle; even if you are a technology professional.
 
-Even technology professionals are human. We have lifes, wifes, kids, friends and clients. Even our brains have limited capacities. Keeping this in mind we prefere simple things that works the right way out of the box.
+Even technology professionals are human. We have lifes, partners, kids, friends and clients. Even our brains have limited capacities. Keeping this in mind we prefere simple things that works the right way out of the box.
 
 But also we love experimenting; testing bleeding edge technologies. Thus we need and want an easy way to safely test things and undo changes if something went wrong; of course without loosing imporant data. And we want to record workflows and play them 10 times, or 100 times, or 1 gazillion times.
 
