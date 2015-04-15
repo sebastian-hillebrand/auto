@@ -184,6 +184,8 @@ Auto does not reinvent the wheel. Ultimately it simply executes commands for you
 
         auto start
 
+Auto respects vendor and software standards; and of course your server or device configuration. Thus you can start and stop using Auto whenever you want. It is upon you to decide if you automate just one aspect of one server or device, or if you automate your entire technology stack with Auto.
+
 ## Auto simplifies using of cool but complex stuff
 
 Do you know Time Machine from Apple? You can use Auto to revert your data or software to any point in time where a snapshot has been created. Auto makes it usable on all servers and devices; plattform indipendend of course.
@@ -216,8 +218,6 @@ Do you know Time Machine from Apple? You can use Auto to revert your data or sof
     To start this workflow, simply repeat your last command, or type:
 
         auto start
-
-Last but not least Auto respects vendor and software standards; and of course your server or device configuration. Thus you can start and stop using Auto whenever you want. It is upon you to decide if you automate just one aspect of one server or device, or if you automate your entire technology stack with Auto.
 
 # Impress
 
