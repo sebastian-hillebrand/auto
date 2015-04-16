@@ -271,7 +271,7 @@ Zudem fragt Auto der Sicherheit halber nochmal nach, wenn mehr als eine Minute v
 
 ***
 
-> Hach. Wäre es nicht schön, wenn das alles auch in der "echten Welt" funktionieren würde. ;-)
+> Hach. Wäre es nicht schön, wenn das alles auch in der "echten Welt" funktionieren würde? ;-)
 
 ***
 
