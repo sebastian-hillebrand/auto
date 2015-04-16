@@ -2,199 +2,249 @@ https://github.com/proojekte/auto/wiki
 
 ***
 
-# Introduction to Auto
+Hinweis: Auf mehrfachen Wunsch beginnen wir mit der Konzeption nun doch zunächst in deutscher Sprache. Erst ab der ersten stabilen Version 1.0 wird dann die Dokumentation parallel in deutscher und englischer Sprache bereitgestellt.
 
-Auto is an open and well-designed automation system.
+# Einführung in Auto
 
-* [Why do we need automation?](#why-do-we-need-automation)
-* [So why are we developing Auto?](#so-why-are-we-developing-auto)
-* [Why do we not use tools already out there?](#why-do-we-not-use-tools-already-out-there)
-* [Abstract](#abstract)
-* [Interaction example](#interaction-example)
-* [Further interaction example](#further-interaction-example)
-* [Auto only does what you would do](#auto-only-does-what-you-would-do)
-* [Auto simplifies using of cool but complex stuff](#auto-simplifies-using-of-cool-but-complex-stuff)
+Auto ist ein offenes und gut durchdachtes Automatisationssystem.
 
-## Why do we need automation?
+## Warum brauchen wir Automatisation?
 
-Administrating, developing and using technology can be very complex and time consuming; and sometimes too complex and too time consuming to get things done the right way; especially when you want to achieve something else and just need an easy tool to get your work done.
+Die Administration, Entwicklung und Nutzung von Technologien kann sehr komplex und aufwendig sein. Nicht selten ist sie sogar zu komplex und aufwendig, um alles auf die richtige Weise zu erledigen; insbesondere, wenn du gerade eigentlich etwas ganz anderes erreichen möchtest und nicht den Kopf frei hast, um dich mit deinem Werkzeug zu beschäftigen.
 
-If you never thought that doing things with technology should be simpler and less time consuming, Auto will not make you happy. Even if googling is good enough for you, Auto would probably be too much overhead for you.
+> **Wenn auch du findest, dass es gerne einfacher und weniger aufwendig sein darf, mit Technolgie Dinge zu tun, ist Automatisation genau das richtige Thema für dich.**
 
-## So why are we developing Auto?
+Reicht dir allerdings googeln und ausprobieren aus, wird dich Automatisation vermutlich nicht glücklicher machen.
 
-Because we need and want something, that simplifies administrating, developing and using technology based on Windows, Mac OS X, iOS, GNU/Linux and Android.
+## Warum also entwickeln wir Auto?
 
-> Complexity is an obstacle; even if you are a technology professional.
+Wir brauchen und wollen etwas, dass uns das Administrieren, Entwickeln und Nutzen von Technologien vereinfacht; unabhängig davon, ob wir Windows, Mac OS X, iOS, GNU/Linux oder Android nutzen.
 
-Even technology professionals are human. We have lifes, partners, kids, friends and clients. Even our brains have limited capacities. Keeping this in mind we prefere simple things that works the right way out of the box.
+> **Komplexität ist ein Hindernis; auch dann, wenn du ein Technologieexperte bist.**
 
-But also we love experimenting; testing bleeding edge technologies. Thus we need and want an easy way to safely test things and undo changes if something went wrong; of course without loosing imporant data. And we want to record workflows and play them 10 times, or 100 times, or 1 gazillion times.
+Auch Technologieexperten sind Menschen. Auch wir haben Leben, Partner, Kinder, Freunde und Kunden. Und auch unsere Gehirne haben eine begrenzte Kapazität. Vor diesem Hintergrund bevorzugen auch wir einfache Dinge, die direkt so funktionieren, wie es sein sollte.
 
-Last but not least, we love optimizing workflows. Designing things that just works the right way out of the box is fun. ;-)
+Auf der anderen Seite lieben wir es auch, zu experimentieren; manchmal sogar, an der sogenannten blutigen Kante zu leben. Folglich brauchen wir Möglichkeiten, um abgesichert Dinge testen und Änderungen einfach und zuverlässig rückgängig machen zu können.
 
-## Why do we not use tools already out there?
+Super praktisch fänden wir es, wenn wir beispielsweise die mehr oder weniger komplexe Aktualisierung einer Software einfach protokollieren könnten, um dann die einzelnen Schritte auf allen Computern aller unserer Kunden automatisch zu wiederholen; natürlich ohne sich Sorgen machen zu müssen, dass dabei irgend etwas schief läuft.
 
-Of course we build up on already available tools. We really do not want to reinvent the wheel. We are thankful for any solution that we do not have to develop ourselves.
+Außerdem lieben wir einfach das Verbessern von Abläufen. Dinge zu gestalten, die direkt so funktionieren, wie es sein sollte, schafft Freu(n)de. ;-)
 
-What we want is an unified interface to every technology on every plattform that we use. And we want to minimize manual effort; for administrators, developers and users, cause we are administrators, developers and users.
+## Aber warum verwenden wir nicht bereits verfügbare Werkzeuge?
 
-But ...
+Nun. Natürlich bauen wir auf bereits verfügbaren Werkzeugen auf. Wir wollen gewiss nicht das Rad neu erfinden. Auch sind wir sehr dankbar für jede Lösung, die wir nicht selbst entwickeln müssen.
 
-> If something can be better, we want it to be better.
+Aber ...
 
-Coupled with curiosity that is exactly why humanity evolves.
+> **Wenn etwas besser gelöst sein könnte, als es derzeit ist, dann wollen wir halt genau das haben.**
 
-We want to put our knowledge and super powers together to create an automation system that makes things easy without reinventing the wheel.
+Finden wir dann niemanden, der sich darum kümmert, machen wir es halt selbst.
 
-Here comes Auto to the stage.
+Gepaart mit Neugier ist es genau das, was die Menschheit sich entwickeln lässt.
 
-## Abstract
+## Vision
 
-Auto is build up on well-designed and proven conventions. It simplifies administration, development and usage of technology through a unified and assistive user interface. Thus Auto helps you staying focused and getting things done; even, if you are not a professional in every technology Auto covers.
+Schon seit langem träumen wir von einer einheitlichen und zugleich organisch wachsende Schnittstelle zu jeder Technologie und Datenquelle auf jeder von uns genutzten Plattform.
 
-Okay. Enough advertising. Let Auto explain itself.
+Auf den ersten Blick mag dieses Ziel vielleicht noch sehr weit weg erscheinen. Jedoch hätte viel von dem, was in den letzten 10 Jahren passiert ist, sich damals auch kaum jemand vorstellen können.
 
-## Interaction example
+Google. Amazon. Facebook. Apple. Netflix. Sie alle haben klein angefangen.
 
-`user@domain@host:~$` **`auto`**
+Also packen wir es an. Nutzen wir unser Wissen und unsere Superkräfte.
 
-    What do you want to automate?
+> **Lasst uns ein Automatisationssystem aufbauen, das auf Basis gut durchdachter und bewährter Konventionen (fast) alles einfacher macht, ohne das Rad neu zu erfinden.**
+
+## Zusammenfassung
+
+> **Auto vereinfacht durch eine einheitliche und unterstützende Schnittstelle plattformübergreifend die Administration, Entwicklung und Nutzung von Technologien, und baut dabei auf gut durchdachten und bewährten Konventionen auf.**
+
+So hilft Auto dir, dich auf das Wesentliche zu konzentrieren und Dinge schnell und einfach auf die richtige Weise zu erledigen; auch, wenn du kein Experte in den Technologien bist, die Auto abdeckt. Denn du kannst beruhigt darauf vertrauen, dass Auto schon weiß, wie es richtig geht.
+
+Okay. Genug Werbung über Auto. Lassen wir einfach mal Auto selbst zu Wort kommen.
+
+## Interaktionsbeispiel
+
+`Nutzer@Domäne@Gerät:~$` **`Auto`**
+
+    Hallo Nutzer.
+
+    Ich bin Auto; ein offenes und gut durchdachtes Automatisationssystem.
+
+    Meine Internetadresse:
+
+        https://proojekte.github.io/auto
+
+    Mein Hauptverwendungsschema:
+
+        Auto <Handlung> [<Ziel>] [wenn <Ereignis>]
+
+    Was kann ich für dich tun?
     
-    Hint:
+    Beispiel:
     
-        auto help
+        Auto liste Handlungen
 
-`user@domain@host:~$` **`auto help`**
+`Nutzer@Domäne@Gerät:~$` **`Auto liste Handlungen`**
 
-    Auto is an open and well-designed automation system.
+    Ich kann für dich Dinge aktualisieren, aufräumen, beenden, beginnen,
+    beobachten, installieren, konfigurieren, kopieren, (auf)listen, löschen,
+    pausieren, protokollieren, prüfen, sichern, signieren, starten,
+    synchronisieren, vergleichen, verschlüsseln, wiederholen, ... und zeigen.
 
-    Visit https://github.com/proojekte/auto/wiki to get an overview.
+    Beispiel:
 
-    Main usage scheme:
+        Auto Sicherung
 
-        auto <command> [<target>] [if <event>]
-    
-    Hint:
-    
-        auto list commands
+Wie du siehst, orientiert sich die Interaktion mit Auto an der natürlichen Sprache; so, als würdest du mit deinem persönlichen Technologieassistenten sprechen.
 
-`user@domain@host:~$` **`auto list commands`**
+Dabei priorisieren wir Eindeutigkeit und Übertragbarkeit (derzeit zwischen den Sprachen Englisch und Deutsch) höher als Natürlichkeit. Beispielsweise beschreibt der erste Teil eines Kommandos immer die \<Handlung>.
 
-    backup, config, copy, delete, diff, hash, help, install, record, show, snapshot,
-    start, stop, sync, upgrade, ...
-    
-    Example:
-    
-        auto help
+Da die Schreibweise (Groß- und Kleinschreibung, Nomen oder Verbform) keine Auswirkung auf die Ausführung eines Kommandos hat, lassen sich dadurch einzelne Kommandos oder ganze Abläufe sehr natürlich beschreiben.
 
-As you can see, using Auto feels natural; like talking with a personal technology assistant.
+Damit sich vorgefertige Abläufe auch dann Einheitlich präsentieren, wenn diese von unterschiedlichen Personen erstellt wurden, formatiert Auto Ablaufbeschreibungen so weit wie möglich automatisch.
 
-## Further interaction example
+## Weiterführendes Interaktionsbeispiel
 
-`user@domain@host:~$` **`auto backup`**
+`Nutzer@Domäne@Gerät:~$` **`Auto Sicherung`**
 
-    You will get a snapshot of all your personal data and software. Location:
+    Soll ich deine Daten, Protokolle und Software in den folgenden Ort sichern?
 
-    /backup/domain/host/user/<date>/<time>/
+    /Sicherungen/Domäne/Gerät/Nutzer/<Datum>/<Zeit>/
 
-    Also you will get log files of every step and its result. Location:
+    Protokolle der einzelnen Schritte und dessen Ergebnisse findest du dann hier:
 
-    /chroot/domain/host/user/var/log/auto/<date>/<time>/
+    /Protokolle/Domäne/Gerät/Nutzer/Auto/Sicherung/letzte/
 
-    Commands, that will be used:
+    Ablauf:
 
-        1. auto start    workflow
-        2. auto snapshot user
-                         backup:<date>/<time>
-        3. auto delete                                      backup:next
-        4. auto move                          backup:latest backup:next
-        5. auto link     backup:<date>/<time> backup:latest
-        6. auto compare                       backup:latest backup:next
-        7. auto stop     workflow
+        1. beginne    Ablauf
+        2. kopiere    Nutzer
+                      Sicherung:<Datum>/<Zeit>
+        3. lösche                                               Sicherung:vorletzte
+        4. verschiebe                          Sicherung:letzte Sicherung:vorletzte
+        5. verknüpfe  Sicherung:<Datum>/<Zeit> Sicherung:letzte
+        6. vergleiche                          Sicherung:letzte Sicherung:vorletzte
+        7. signiere                            Sicherung:letzte
+        8. beende     Ablauf
 
-    To start this workflow, simply repeat your last command, or type:
+    Um diesen Ablauf ausführen zu lassen, wiederhole dein Kommando, oder schreibe:
 
-        auto start
+        Auto ausführen
 
-Whenever it seams usefull, Auto tells you in front of every automation what it tries to reach for you, which commands it will use and how to start the workflow. This way it is always safe to just guess a command and look if it results in something you want.
+Wann immer es Auto sinnvoll erscheint, beschreibt es dir vorab, was es für dich wie zu erreichen versucht, bevor es etwas an deinen Daten oder deiner Software verändert.
 
-Of couse Auto even tells you what is going on right now and if everthing went well.
+So kannst du einfach ausprobieren, ob ein Kommando das bewirkt, was du dir wünschst.
 
-`user@domain@host:~$` **`auto start`**
+Natürlich informiert dich Auto auch über den Fortschritt und Erfolg eines Ablaufs.
 
-    Okay. Let's backup.
+`Nutzer@Domäne@Gerät:~$` **`Auto ausführen`**
 
-        1. auto start workflow
+    Ich sichere nun deine Daten, Protokolle und Software in den folgenden Ort.
 
-    done.
+    /Sicherungen/Domäne/Gerät/Nutzer/2015-04-15/16-08-04/
 
-        2. auto snapshot user backup:2015-04-15/16-08-04
+    Protokolle der einzelnen Schritte und dessen Ergebnisse findest du dann hier:
 
-    done.
+    /Protokolle/Domäne/Gerät/Nutzer/Auto/Sicherung/letzte
 
-        3. auto delete backup:next
+        1. beginne Ablauf
 
-    done.
+    erledigt
 
-        4. auto move backup:latest backup:next
+        2. kopiere Nutzer Sicherung:2015-04-15/16-08-04
 
-    done.
+    erledigt
 
-        5. auto link backup:2015-04-15/16-03-09 backup:latest
+        3. lösche Sicherung:vorletzte
 
-    done.
+    erledigt
 
-        6. auto compare backup:latest backup:next
+        4. verschiebe Sicherung:letzte Sicherung:vorletzte
 
-    1 file added.
-    2 files deleted.
-    3 files changed.
+    erledigt
 
-        7. auto stop workflow
+        5. verknüpfe Sicherung:2015-04-15/16-03-09 Sicherung:letzte
 
-    Well done.
+    erledigt
 
-    Detailed log files of every step and its result are stored here:
+        6. vergleiche Sicherung:letzte Sicherung:vorletzte
 
-    /chroot/domain/host/user/var/log/auto/2015-04-15/16-08-04/
+    erstellt:  4 Dateien
+    gelöscht:  3 Dateien und 2 Verzeichnisse
+    verändert: 1 Datei
 
-## Auto only does what you would do
+        7. signiere Sicherung:letzte
 
-Auto does not reinvent the wheel. Ultimately it simply executes commands for you; the way you would do it if you would have enough time to be a specialized professional in every technology Auto covers.
+    erledigt
 
-`user@domain@host:~$` **`auto sync`**
+        8. beende Ablauf
 
-    All your personal data and software will be synced bidirectional with
-    user@domain@server.
+    fertig.
 
-    Also you will get log files of every step and its result. Location:
+    Protokolle der einzelnen Schritte und dessen Ergebnisse findest du nun hier:
 
-    /chroot/domain/host/user/var/log/auto/<date>/<time>/
+    /Protokolle/Domäne/Gerät/Nutzer/Auto/Sicherung/letzte/
 
-    Commands, that will be used:
+    Tipp:
 
-        1. auto start   workflow
-        2. auto backup
-        3. auto execute "rsync -a -b -c -X -Y -Z -1 -2 -3 <uri 1> <uri 2>"
-        4. auto backup
-        5. auto stop    workflow
+        Auto zeige Protokolle:letzte
 
-    To start this workflow, simply repeat your last command, or type:
+## Auto tut nur, was auch du tun würdest
 
-        auto start
+Auto erfindet nicht erneut das Rad. Letztlich führt es einfach nur Kommandos für dich aus; so, wie du es selbst machen würdest, wenn du genug Zeit hättest, um ein Experte jeder Technologie zu sein, die Auto für dich beherrscht.
 
-Auto respects vendor and software standards; and of course your server or device configuration. Thus you can start and stop using Auto whenever you want. It is upon you to decide if you automate just one aspect of one server or device, or if you automate your entire technology stack with Auto.
+`Nutzer@Domäne@Gerät:~$` **`Auto Synchronisation`**
 
-## Auto simplifies using of cool but complex stuff
+    Soll ich deine Daten, Protokolle und Software mit deinem Nutzer auf
+    server.domäne in beide Richtungen synchronisieren?
 
-Do you know Time Machine from Apple? You can use Auto to revert your data or software to any point in time where a snapshot has been created. Auto makes it usable on all servers and devices; plattform indipendend of course.
+    Protokolle der einzelnen Schritte und dessen Ergebnisse findest du dann hier:
 
-`user@domain@host:~$` **`auto undo upgrade thunderbird`**
+    /Protokolle/Domäne/Gerät/Nutzer/Auto/Synchronisation/letzte/
 
-    You have upgraded Mozilla Thunderbird two days ago.
+    Ablauf:
 
-    Undo reverts the following changes the upgrade caused:
+        1. beginne   Ablauf
+        2. Sicherung Nutzer@Domäne@Server
+                     im Hintergrund
+        3. Sicherung
+        4. ausführen "rsync -a -b -c -X -Y -Z -1 -2 -3 <uri 1> <uri 2>"
+                     wenn 2
+        5. Sicherung Nutzer@Domäne@Server
+                     im Hintergrund
+        6. Sicherung
+        7. beende    Ablauf
+                     wenn 5
+
+    Um diesen Ablauf ausführen zu lassen, wiederhole dein Kommando, oder schreibe:
+
+        Auto ausführen
+
+Wie du siehst, macht Auto auch sehr komplexe Abläufe ganz einfach.
+
+Zudem respektiert Auto Hersteller- und Softwarestandards; und natürlich auch deine Server- oder Gerätekonfiguration. Deshalb kannst du jederzeit damit beginnen oder aufhören, Auto zu verwenden.
+
+Es ist allein von dir abhängig, ob du Auto beispielsweise nur für einen einzelnen Aspekt einer Technologie nutzen möchtest, oder für die Administration, Entwicklung und Nutzung sämtlicher Technologien.
+
+## Auto sorgt für Sicherheit und Verlässlichkeit
+
+Hast du das auch schon mal erlebt, dass ohne Not plötzlich etwas nicht mehr funktioniert?
+
+Mit Auto hast du auf sehr einfache Weise die volle Kontrolle über die Sicherung und Rücksicherung deiner Daten, Protokolle und Software; plattformübergreifend und vollständig nachvollziehbar.
+
+`Nutzer@Domäne@Gerät:~$` **`Auto rückgängig Aktualisierung Thunderbird`**
+
+    Soll ich die Aktualisierung von Mozilla Thunderbird rückgängig machen?
+
+    Protokolle der einzelnen Schritte und dessen Ergebnisse findest du dann hier:
+
+    /Protokolle/Domäne/Gerät/Nutzer/Auto/rückgängig/Aktualisierung/
+        Mozilla/Thunderbird/letzte/
+
+    Mozilla Thunderbird wurde vor zwei Tagen automatisch von Version X auf Version
+    Y aktualisiert.
+
+    Die Aktualisierung hatte folgende Änderungen verursacht:
 
     1. a
     2. b
@@ -203,38 +253,25 @@ Do you know Time Machine from Apple? You can use Auto to revert your data or sof
     5. Y
     6. Z
 
-    Also you will get log files of every step and its result. Location:
+    Ablauf:
 
-    /chroot/domain/host/user/var/log/auto/<date>/<time>/
+        1. beginne       Ablauf
+        2. Sicherung
+        3. Rücksicherung Sicherung:Aktualisierung/Mozilla/Thunderbird/vorletzte
+        4. Sicherung
+        5. beende        Ablauf
 
-    Commands, that will be used:
+    Um diesen Ablauf ausführen zu lassen, wiederhole dein Kommando, oder schreibe:
 
-        1. auto start  workflow
-        2. auto backup
-        3. auto undo   backup:2015-04-12/10-11-12
-        4. auto backup
-        5. auto stop   workflow
+        Auto ausführen
 
-    To start this workflow, simply repeat your last command, or type:
+Ist das, was dir Auto vorschlägt für dich zu tun, nicht das, was du möchtest, brauchst du nichts weiter zu beachten.
 
-        auto start
+Zudem fragt Auto der Sicherheit halber nochmal nach, wenn mehr als eine Minute vergangen ist, bevor du Auto geantwortet hast.
 
-# Impress
+***
 
-    Proojekte GmbH: Acting with insight and foresight.
-    Innovative services from highly motivated professionals.
-    
-    Phone: +49 2542 889147
-    Fax:   +49 2542 889148
-    
-          www.proojekte.de
-    kontakt(a)proojekte.de
-    
-    CEO:         Christian Wantia
-    Address:     Harwick 61, 48712 Gescher, Germany
-    Reg. court:  Amtsgericht Coesfeld
-    Reg. number: HRB 13094
-    VAT ID:      DE 275 978 266
+> Hach. Wäre es nicht schön, wenn das alles auch in der "echten Welt" funktionieren würde. ;-)
 
 ***
 
