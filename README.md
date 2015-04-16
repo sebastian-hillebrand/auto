@@ -44,15 +44,13 @@ Gepaart mit Neugier ist es genau das, was die Menschheit sich entwickeln lässt.
 
 ## Vision
 
-Schon seit langem träumen wir von einer einheitlichen und zugleich organisch wachsende Schnittstelle zu jeder Technologie und Datenquelle auf jeder von uns genutzten Plattform.
+> Schon seit langem träumen wir von einer einheitlichen und in jeder Hinsicht einfachen Schnittstelle zu jeder Technologie und Datenquelle auf jeder von uns genutzten Plattform.
 
 Auf den ersten Blick mag dieses Ziel vielleicht noch sehr weit weg erscheinen. Jedoch hätte viel von dem, was in den letzten 10 Jahren passiert ist, sich damals auch kaum jemand vorstellen können.
 
 Google. Amazon. Facebook. Apple. Netflix. Sie alle haben klein angefangen.
 
-Also packen wir es an. Nutzen wir unser Wissen und unsere Superkräfte.
-
-> Lasst uns ein Automatisationssystem aufbauen, das auf Basis gut durchdachter und bewährter Konventionen (fast) alles einfacher macht, ohne das Rad neu zu erfinden.
+Also packen wir es an. Nutzen wir unser Wissen und unsere Superkräfte. Lasst uns ein Automatisationssystem aufbauen, das (fast) alles einfacher macht, ohne das Rad neu zu erfinden.
 
 ## Zusammenfassung
 
