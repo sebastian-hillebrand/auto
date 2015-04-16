@@ -12,7 +12,7 @@ Auto ist ein offenes und gut durchdachtes Automatisationssystem.
 
 Die Administration, Entwicklung und Nutzung von Technologien kann sehr komplex und aufwendig sein. Nicht selten ist sie sogar zu komplex und aufwendig, um alles auf die richtige Weise zu erledigen; insbesondere, wenn du gerade eigentlich etwas ganz anderes erreichen möchtest und nicht den Kopf frei hast, um dich mit deinem Werkzeug zu beschäftigen.
 
-> **Wenn auch du findest, dass es gerne einfacher und weniger aufwendig sein darf, mit Technolgie Dinge zu tun, ist Automatisation genau das richtige Thema für dich.**
+> Wenn auch du findest, dass es gerne einfacher und weniger aufwendig sein darf, mit Technolgie Dinge zu tun, ist Automatisation genau das richtige Thema für dich.
 
 Reicht dir allerdings googeln und ausprobieren aus, wird dich Automatisation vermutlich nicht glücklicher machen.
 
@@ -20,7 +20,7 @@ Reicht dir allerdings googeln und ausprobieren aus, wird dich Automatisation ver
 
 Wir brauchen und wollen etwas, dass uns das Administrieren, Entwickeln und Nutzen von Technologien vereinfacht; unabhängig davon, ob wir Windows, Mac OS X, iOS, GNU/Linux oder Android nutzen.
 
-> **Komplexität ist ein Hindernis; auch dann, wenn du ein Technologieexperte bist.**
+> Komplexität ist ein Hindernis; auch dann, wenn du ein Technologieexperte bist.
 
 Auch Technologieexperten sind Menschen. Auch wir haben Leben, Partner, Kinder, Freunde und Kunden. Und auch unsere Gehirne haben eine begrenzte Kapazität. Vor diesem Hintergrund bevorzugen auch wir einfache Dinge, die direkt so funktionieren, wie es sein sollte.
 
@@ -36,7 +36,7 @@ Nun. Natürlich bauen wir auf bereits verfügbaren Werkzeugen auf. Wir wollen ge
 
 Aber ...
 
-> **Wenn etwas besser gelöst sein könnte, als es derzeit ist, dann wollen wir halt genau das haben.**
+> Wenn etwas besser gelöst sein könnte, als es derzeit ist, dann wollen wir halt genau das haben.
 
 Finden wir dann niemanden, der sich darum kümmert, machen wir es halt selbst.
 
@@ -52,11 +52,11 @@ Google. Amazon. Facebook. Apple. Netflix. Sie alle haben klein angefangen.
 
 Also packen wir es an. Nutzen wir unser Wissen und unsere Superkräfte.
 
-> **Lasst uns ein Automatisationssystem aufbauen, das auf Basis gut durchdachter und bewährter Konventionen (fast) alles einfacher macht, ohne das Rad neu zu erfinden.**
+> Lasst uns ein Automatisationssystem aufbauen, das auf Basis gut durchdachter und bewährter Konventionen (fast) alles einfacher macht, ohne das Rad neu zu erfinden.
 
 ## Zusammenfassung
 
-> **Auto vereinfacht durch eine einheitliche und unterstützende Schnittstelle plattformübergreifend die Administration, Entwicklung und Nutzung von Technologien, und baut dabei auf gut durchdachten und bewährten Konventionen auf.**
+> Auto vereinfacht durch eine einheitliche und unterstützende Schnittstelle plattformübergreifend die Administration, Entwicklung und Nutzung von Technologien, und baut dabei auf gut durchdachten und bewährten Konventionen auf.
 
 So hilft Auto dir, dich auf das Wesentliche zu konzentrieren und Dinge schnell und einfach auf die richtige Weise zu erledigen; auch, wenn du kein Experte in den Technologien bist, die Auto abdeckt. Denn du kannst beruhigt darauf vertrauen, dass Auto schon weiß, wie es richtig geht.
 
